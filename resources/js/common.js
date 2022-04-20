@@ -6,7 +6,9 @@ $(function() {
     // 메인 : 비주얼
     var mainVertical = new Swiper('.main_vertical', {
         direction: "vertical",
+        effect: "slide",
         slidesPerView: 'auto',
+        speed: 1000,
         allowTouchMove:false,
         simulateTouch:false,
         touchStartPreventDefault:false,
@@ -20,6 +22,14 @@ $(function() {
             el: '.main_vertical .swiper-pagination',
             clickable : true,
         },
+        breakpoints: {
+			1024: {
+				allowTouchMove:true,
+				simulateTouch:true,
+				grabCursor: true,
+				touchStartPreventDefault:true,
+			},
+		},
     });
 });
 

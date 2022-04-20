@@ -19,12 +19,21 @@ html, body, .wrap, .container, .main_vertical{width:100%;height:100%;}
 
 
 /* 하단 */
-.footer{position:relative;width:100%;height:auto;background:#000;display:flex;}
-.footer .ft_info1{}
-.footer .ft_info1 .info_text{position:relative;font-size:14px;font-weight:500;color:#1A1A1A;}
-
-
-
+#footer_wrap{width:100%;background:#232326;display:flex;justify-content:center;}
+.footer{position:relative;width:calc(100% - 80px);height:auto;display:flex;justify-content:space-between;margin-top:114px;font-size:16px;font-weight:400;color:#bcbcbd;}
+.footer dt{margin-bottom:10px;color:#fff;}
+.footer dd{margin-bottom:10px;}
+.footer .ft_info1{width:278px;}
+.footer .ft_info2{width:600px;}
+.footer .ft_info2 dt{display:inline-block;width:130px;}
+.footer .ft_info2 dd{display:inline-block;width:400px;}
+.footer .ft_info3{width:490px;}
+.footer .ft_info3 dt{display:inline-block;width:100px;vertical-align:top;}
+.footer .ft_info3 dd{display:inline-block;width:350px;}
+.footer .ft_sns{}
+.footer .ft_sns a{display:inline-block;width:180px;text-align:center;font-size:14px;color:#fff;padding:16px 0;border:2px solid #919193;border-radius:50px;}
+.footer .ft_sns .ft_sns_android{background:url('../../images/common/ico_android.png') no-repeat 0 50%;}
+.footer .ft_sns .ft_sns_iso{background:url('../../images/common/ico_iso.png') no-repeat 0 50%;}
 
 
 
@@ -32,7 +41,7 @@ html, body, .wrap, .container, .main_vertical{width:100%;height:100%;}
 @media all and (max-width:1920px) {
 }
 
-@media all and (max-width:1366px) {
+@media all and (max-width:1440px) {
 }
 
 @media all and (max-width:1024px) {
