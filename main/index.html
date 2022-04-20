@@ -20,7 +20,7 @@
 <script>
     $(function() {
         $("#header_wrap").load("../include/header.html", function () {
-            gnbMenu(1);
+            gnbMenu(1); // 서비스 소개 menu on
         });
         $("#footer_wrap").load("../include/footer.html");
     });
@@ -28,20 +28,29 @@
 </head>
 <body>
 
+
+
 <div class="wrap">
     <!-- 상단 -->
     <div id="header_wrap"></div>
     <!-- //상단 -->
+    <div class="btn_top_wrap">
+        <a href="#header_wrap" class="btn_top"><span class="blind">top</span></a>
+    </div>
 
-    <!-- 본문내용 -->
+    <!-- 본문내용 -->    
     <div class="container">
-
         <section class="swiper-container main_vertical">
             <div class="swiper-pagination"></div>
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide">                    
+                    <div class="scroll_down">
+                        <p>Scroll</p>
+                        <i><span class="blind">스크롤아이콘</span></i>
+                    </div>
                     <div class="inner">
-                        <div class="visual_text">
+                        <div class="text_wrap">
+                            <p class="tag"><span># 반려견 미용</span> <span># 반려묘 미용</span># 호텔 <span># 유치원</span></p>
                             <p class="title">반려생활의 동반자</p>
                             <p class="desc">
                                 <strong>반려동물 미용부터 호텔까지!</strong>
@@ -52,9 +61,10 @@
                         <img src="../images/main/img_visual_01.jpg" alt="" />
                     </div>
                 </div>
+
                 <div class="swiper-slide">
                     <div class="inner">
-                        <div class="visual_text">
+                        <div class="text_wrap">
                             <p class="title">최고의 퀄리티</p>
                             <p class="desc">
                                 <strong>깐깐한 심사로 업계 최고의 매장만</strong>
@@ -65,13 +75,14 @@
                         <img src="../images/main/img_visual_02.jpg" alt="" />
                     </div>
                 </div>
+
                 <div class="swiper-slide">
                     <div class="inner">
-                        <div class="visual_text">
+                        <div class="text_wrap right">
                             <p class="title">스마트한 예약</p>
                             <p class="desc">
                                 <span>일일이 전화해서 매장을 찾으셨나요?</span>
-                                <span>이젠 매장과의 거리, 평점, 리뷰, 특징 등</span>
+                                <span class="mtop">이젠 매장과의 거리, 평점, 리뷰, 특징 등</span>
                                 <strong>한눈에 내 주변 매장을 보시고</strong>
                                 <strong>더욱 편리하게 예약, 결제하세요.</strong>
                             </p>
@@ -79,33 +90,36 @@
                         <img src="../images/main/img_visual_03.jpg" alt="" />
                     </div>
                 </div>
+
                 <div class="swiper-slide">
                     <div class="inner">
-                        <div class="visual_text">
+                        <div class="text_wrap">
                             <p class="title">안심 서비스</p>
                             <p class="desc">
                                 <span>내 반려동물을 맡기고 불안하셨나요?</span>
                                 <span>이제 걱정하지 마세요.</span>
-                                <strong>실시간으로 서비스 단계별 상태를 전송 받음으로</strong>
+                                <strong class="mtop">실시간으로 서비스 단계별 상태를 전송 받음으로</strong>
                                 <strong>안심하고 서비스를 이용하실 수 있어요.</strong>
                             </p>
                         </div>
                         <img src="../images/main/img_visual_04.jpg" alt="" />
                     </div>
                 </div>
-                <div class="swiper-slide">
+
+                <div class="swiper-slide">                    
                     <div class="inner">
-                        <div class="visual_text">
+                        <div class="text_wrap right">
                             <p class="title">반려동물의 연결고리</p>
                             <p class="desc">
                                 <strong>반려동물을 마음을 가장 잘 아는</strong>
                                 <strong>똑똑한 펫미와 함께 하세요.</strong>
-                                <span>펫미를 만나면 즐거운 반려생활이 시작됩니다.</span>
+                                <span class="mtop">펫미를 만나면 즐거운 반려생활이 시작됩니다.</span>
                             </p>
                         </div>
                         <img src="../images/main/img_visual_05.jpg" alt="" />
                     </div>
                 </div>
+
                 <div class="swiper-slide footer_section">
                     <!-- 하단 -->
                     <div id="footer_wrap"></div>
