@@ -94,6 +94,7 @@
 
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:26px;height:26px;border-radius:50%;transition:all .3s;opacity:1;}
 .main_vertical .swiper-pagination-bullet-active:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:28px;height:28px;border-radius:50%;border:1px solid #fff;background-color:rgba(255,255,255,0.2);transition:all .3s;opacity:0;}
+.swiper-container-vertical>.swiper-pagination-bullets span:last-child{display:none;}
 
 /* 상단가기 버튼 */
 .btn_top_wrap{display:none;position:fixed;bottom:80px;right:5%;transition:1s;z-index:20;}
