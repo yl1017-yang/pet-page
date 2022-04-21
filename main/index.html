@@ -17,10 +17,10 @@
 <script src="../resources/js/jquery-3.4.1.js"></script>
 <script src="../resources/js/common.js"></script>
 <script src="../resources/js/swiper.min.js"></script>
-<script>
+<script>    
     $(function() {
-        $("#header_wrap").load("../include/header.html", function () {
-            gnbMenu(1); // 서비스 소개 menu on
+        $("#header_wrap").load("../include/header.html", function() {
+            gnbMenu(1); //메뉴 페이지 on
         });
         $("#footer_wrap").load("../include/footer.html");
     });
@@ -28,25 +28,30 @@
 </head>
 <body>
 
-
-
 <div class="wrap">
     <!-- 상단 -->
     <div id="header_wrap"></div>
     <!-- //상단 -->
-    <div class="btn_top_wrap">
-        <a href="#header_wrap" class="btn_top"><span class="blind">top</span></a>
-    </div>
 
-    <!-- 본문내용 -->    
+    <!-- 본문내용 -->
     <div class="container">
-        <section class="swiper-container main_vertical">
+        <!-- top 버튼 -->
+        <div class="btn_top_wrap">
+            <a href="#header_wrap" class="btn_top"><span class="blind">top</span></a>
+        </div>
+
+        <section class="swiper-container fullscreen">
             <div class="swiper-pagination"></div>
             <div class="swiper-wrapper">
-                <div class="swiper-slide">                    
+                <div class="swiper-slide">
+                    <!-- 스크롤아이콘 / quick sns 버튼 -->                 
                     <div class="scroll_down">
                         <p>Scroll</p>
                         <i><span class="blind">스크롤아이콘</span></i>
+                    </div>
+                    <div class="quick_sns">
+                        <a href="#" class="quick_android" title="Google play 바로가기"><span class="blind">Google play</span></a>
+                        <a href="#" class="quick_iso" title="App store 바로가기"><span class="blind">App store</span></a>
                     </div>
                     <div class="inner">
                         <div class="text_wrap">

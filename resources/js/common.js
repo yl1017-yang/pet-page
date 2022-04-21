@@ -3,8 +3,13 @@ $(function() {
         mainVertical();
     });
 
-    // 메인 : 비주얼
-    var mainVertical = new Swiper('.main_vertical', {
+	mainVertical();
+	gnbMenu();
+});
+
+// 메인 - 서비스소개
+function mainVertical() {    
+    var mainVertical = new Swiper('.fullscreen', {
         direction: "vertical",
         effect: "slide",
         slidesPerView: 'auto',
@@ -19,7 +24,7 @@ $(function() {
         },
         mousewheelControl: true,
         pagination: {
-            el: '.main_vertical .swiper-pagination',
+            el: '.fullscreen .swiper-pagination',
             clickable : true,
         },
 
@@ -28,12 +33,12 @@ $(function() {
 			},
 			transitionStart: function(){
 				if(this.activeIndex != 0){
-					$(".btn_top_wrap").fadeIn(300);
+					$(".btn_top_wrap").fadeIn(500);
 				}else{
-					$(".btn_top_wrap").fadeOut(300);
+					$(".btn_top_wrap").fadeOut(500);
 				}
 				
-				var footHeight = $(".footer_section").height();
+				var footHeight = $(".footer_section").outerHeight();
 				if($(".footer_section").hasClass("swiper-slide-visible")){
 					$(".btn_top_wrap").css("position","fixed").css("bottom",footHeight + 80).addClass('on');
 				}else{
@@ -57,14 +62,11 @@ $(function() {
     $(".btn_top_wrap a").click(function(){
 		mainVertical.slideTo(0,600);
 	});
-});
-
+}
 
 // 상단메뉴
 function gnbMenu(depth1) {
 	var $gnbDep1 = $('.gnb li');
     
-    if ($gnbDep1.length > depth1-1) {
-        $gnbDep1.eq(depth1-1).find('> a').addClass('on');
-	}
+    $gnbDep1.eq(depth1-1).find('> a').addClass('on');
 }
