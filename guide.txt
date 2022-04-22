@@ -8,6 +8,8 @@
 - 서비스소개 (메인)
 https://yl1017-yang.github.io/pet-page/main/index.html
 
+- 회사소개 : 레이아웃만 잡음
+https://yl1017-yang.github.io/pet-page/company/index.html
 
 
 *****************************************
@@ -22,29 +24,20 @@ https://yl1017-yang.github.io/pet-page/main/index.html
 *****************************************
 ▶ 반응형 사이즈
 
-@media all and (max-width:1920px){
+@media all and (max-width:1920px) {
 }
-
-@media all and (max-width:1440px){
+@media all and (max-width:1440px) {
 }
-
-@media all and (max-width:1024px){ 
+@media all and (max-width:1024px) {
 }
-
-@media all and (max-width:980px){
-    
+@media all and (max-width:980px) {    
 }
-
-@media all and (max-width:800px){
-
+@media all and (max-width:720px) {
 }
-
-@media all and (max-width:480px){
+@media all and (max-width:480px) {
 }
-
-@media all and (max-width:360px){
+@media all and (max-width:360px) {
 }
-
 
 
 *****************************************

@@ -12,7 +12,7 @@
 <meta name="Description" content="반려생활의 동반자 반려동물 미용부터 호텔까지!, 최고의 퀄리티, 스마트한 예약, 안심 서비스, 반려동물의 연결고리" />
 <link rel="stylesheet" href="../resources/css/common.css">
 <link rel="stylesheet" href="../resources/css/layout.css">
-<link rel="stylesheet" href="../resources/css/main.css">
+<link rel="stylesheet" href="../resources/css/sub.css">
 <link rel="stylesheet" href="../resources/css/swiper.min.css">
 <script src="../resources/js/jquery-3.4.1.js"></script>
 <script src="../resources/js/common.js"></script>
@@ -21,6 +21,7 @@
     $(function() {
         $("#header_wrap").load("../include/header.html", function() {
             gnbMenu(4); //메뉴 페이지 on
+            $("#header_wrap").addClass('sub_header');
         });
         $("#footer_wrap").load("../include/footer.html");
     });
@@ -28,11 +29,11 @@
 </head>
 <body>
 
-<!-- 마우스포인터 -->
-<div class="pointer"></div>
-<!-- //마우스포인터 -->
-
 <div class="wrap">
+    <!-- 마우스포인터 -->
+    <div class="pointer"></div>
+    <!-- //마우스포인터 -->
+    
     <!-- 상단 -->
     <div id="header_wrap"></div>
     <!-- //상단 -->
@@ -46,14 +47,13 @@
         <section class="content">
             회사소개 컨텐츠
         </section>
-        
+
     </div>    
     <!-- //본문내용 -->
 
     <!-- 하단 -->
     <div id="footer_wrap"></div>
     <!-- //하단 -->
-
 </div>
 </body>
 </html>

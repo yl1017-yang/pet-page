@@ -1,3 +1,4 @@
+<!-- 헤더 -->
 <header class="header">
     <h1 class="logo">
         <a href="../main/index.html"><span class="blind">PETME logo</span></a>
@@ -21,9 +22,68 @@
     <div class="util">
         <div class="util_member">
             <a href="#" class="on">반려인</a>
-            <a href="#">사장님</a>
+            <a href="#">사장님</a>            
         </div>
         <a href="#" class="util_insta" title="인스타그램 바로가기"><span class="blind">인스타그램</span></a>
         <a href="#" class="util_facebook" title="페이스북 바로가기"><span class="blind">페이스북</span></a>
     </div>
+    
+    <a href="#moopen" class="btn_nav_open"><span class="blind">모바일메뉴 열기</span></a>
 </header>
+<!-- 헤더 -->
+
+<!-- 모바일 메뉴 open -->
+<div id="moopen" class="mo_nav_wrap">
+    <div class="mo_nav_inner">
+        <div class="mo_top">
+            <h1 class="logo">
+                <a href="../main/index.html"><span class="blind">PETME logo</span></a>
+            </h1>
+            <div class="util_member">
+                <a href="#" class="on">견주님</a>
+                <a href="#">점주님</a>
+            </div>
+            <a href="#" class="btn_close"><span class="blind">모바일메뉴 닫기</span></a>
+        </div>
+        <ul class="mo_gnb">
+            <li>
+                <a href="../main/index.html">서비스 소개</a>
+            </li>
+            <li>
+                <a href="#">이용방법</a>
+            </li>
+            <li>
+                <a href="#">이벤트・공지</a>
+            </li>
+            <li>
+                <a href="../company/index.html">회사소개</a>
+            </li>
+        </ul>
+        <dl class="mo_custmer">
+            <dt>고객만족센터</dt>
+            <dd>
+                <p>카카오톡 채널 <span class="ico_cacao"></span>@petme</p>
+                <p>평일 오전 9시 ~ 오후 6시</p>
+            </dd>
+            <dt>제휴문의</dt>
+            <dd>petme.sky@petme.kr</dd>
+        </dl>
+        <div class="mo_sns">
+            <a href="#" class="mo_insta" title="인스타그램 바로가기"><span class="blind">인스타그램</span></a>
+            <a href="#" class="mo_facebook" title="페이스북 바로가기"><span class="blind">페이스북</span></a>
+        </div>
+    </div>
+</div>
+<script>
+	$('.btn_nav_open').on('click',function(){
+		var href = $(this).attr("href");
+		$('.mo_nav_wrap' + href).addClass('on');
+		$('body').css({'height':$(window).height(), 'overflow':'hidden'});
+	});
+	$('.mo_nav_wrap .btn_close').on('click', function(e){
+		e.preventDefault();
+		$('.mo_nav_wrap').removeClass('on');
+		$('body').css({'height':$(window).height(), 'overflow':'auto'});
+	});
+</script>
+<!-- //모바일 메뉴 open -->
