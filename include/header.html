@@ -1,3 +1,23 @@
+<!-- 마우스 커서 -->
+<div class="pointer" id="pointer"></div>
+<style>
+.pointer{position:fixed;width:50px; height:50px; border-radius:50px; background:red; transition:all 0.5s ease-out;opacity: 50%;z-index:-1;}
+.pointer.on{width:50px; height:50px;}
+</style>
+<script>
+
+var pointSize = $(".pointer").width()/2;
+$(window).on("mousemove", function(e){   
+   $('.pointer').css("top", e.pageY-pointSize);
+    $('.pointer').css("left", e.pageX-pointSize);
+    $('.pointer').on('scroll touchmove mousewheel');
+});
+$(window).on("mouseleave", function(){
+  //$('.pointer').fadeOut();
+});
+</script>
+<!-- //마우스 커서 -->
+
 <header class="header">
     <h1 class="logo">
         <a href="../main/index.html"><span class="blind">PETME logo</span></a>

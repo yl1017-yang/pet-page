@@ -27,13 +27,14 @@
 /* 텍스트 */
 .fullscreen .swiper-slide .text_wrap {
     position:absolute;
-    width:1440px;
+    left:12.5%;
+    right:0;
     color:#fff;
     z-index:10;
 } 
 .fullscreen .swiper-slide .text_wrap.right {
     left:50%;
-    margin-left:235px;
+    margin-left:12%;
 }
 .fullscreen .swiper-slide .tag {
     font-size:18px;
@@ -87,24 +88,25 @@
 }
 
 /* pagination */
+.swiper-pagination{width:50px;}
 .swiper-container-vertical>.swiper-pagination-bullets{left:5%;right:0;}
 .fullscreen .swiper-pagination-bullet{position:relative;background:#fff !important;opacity:.4 !important;}
-.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:26px 0 !important;}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:50px 0 !important;}
 .fullscreen .swiper-pagination-bullet-active{background:#fff !important;opacity:1 !important;}
 
-.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:26px;height:26px;border-radius:50%;transition:all .3s;opacity:1;}
-.fullscreen .swiper-pagination-bullet-active:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:28px;height:28px;border-radius:50%;border:1px solid #fff;background-color:rgba(255,255,255,0.2);transition:all .3s;opacity:0;}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:40px;height:40px;border-radius:50%;transition:all .3s;opacity:1;}
+.fullscreen .swiper-pagination-bullet-active:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.1);transition:all .3s;opacity:0;}
 .swiper-container-vertical>.swiper-pagination-bullets span:last-child{display:none;}
 
 /* 퀵버튼-sns */
-.quick_sns{position:absolute;width:60px;top:50%;right:5%;z-index:20;}
-.quick_sns .quick_android{display:block;width:60px;height:60px;background:rgba(20,20,20,0.2) url('../../images/common/ico_android.png') no-repeat 50% 50%;border-radius:100%;margin-bottom:30px;}
+.quick_sns{position:absolute;width:60px;top:50%;right:5%;z-index:50;}
+.quick_sns .quick_android{display:block;width:60px;height:60px;background:rgba(20,20,20,0.2) url('../../images/common/ico_android.png') no-repeat 50% 50%;border-radius:100%;margin-bottom:30px;transition:all 0.3s ease-in-out;}
 .quick_sns .quick_android:hover{background-color:rgba(20,20,20,0.6);}
 .quick_sns .quick_iso{display:block;width:60px;height:60px;background:rgba(20,20,20,0.2) url('../../images/common/ico_iso.png') no-repeat 50% 50%;border-radius:100%;transition:all 0.3s ease-in-out;}
 .quick_sns .quick_iso:hover{background-color:rgba(20,20,20,0.6);}
 
 /* 상단가기 버튼 */
-.btn_top_wrap{display:none;position:fixed;bottom:80px;right:5%;transition:1s;z-index:20;}
+.btn_top_wrap{display:none;position:fixed;bottom:80px;right:4.16%;transition:1s;z-index:20;}
 .btn_top_wrap .btn_top{display:block;position:relative;width:60px;height:60px;border-radius:100%;background-color:rgba(0, 0, 0, 0.7);background-image:url("../../images/common/icon_arrow_btn.png");background-repeat:no-repeat;background-position:50%;}
 .btn_top_wrap .btn_top:after{content:'';position:absolute;left:-50%;top:-50%;width:114px;height:114px;background:url('../../images/common/ico_backtop.png') no-repeat 50% 50%;-webkit-animation:topRotate 2s linear both infinite;animation:topRotate 2s linear both infinite;}
 
@@ -156,20 +158,23 @@
 
 @media all and (max-width:1440px){
     .fullscreen .swiper-slide .text_wrap.right {
-        margin-left:0;
+        margin-left:1%;
     }
     .fullscreen .swiper-slide .text_wrap {
-        width:calc(100% - 180px);
+        left:8%;
     } 
     .swiper-container-vertical>.swiper-pagination-bullets{left:2%;}
     .fullscreen .scroll-down{left:2%;}
+    .quick_sns{right:2%;}
 }
 
 @media all and (max-width:1024px){
     .fullscreen .swiper-slide .text_wrap.right {
         left:90px;
+        margin-left:0;
     }
-    .swiper-container-vertical>.swiper-pagination-bullets{display:none;}    
+    .swiper-container-vertical>.swiper-pagination-bullets{display:none;}
+    .quick_sns{display:none;}
 }
 
 @media all and (max-width:980px){

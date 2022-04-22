@@ -5,6 +5,16 @@ $(function() {
 
 	mainVertical();
 	gnbMenu();
+	var pointSize = $(".pointer").width()/2;
+$(window).on("mousemove", function(e){   
+    $('.pointer').css("top", e.pageY-pointSize);
+    $('.pointer').css("left", e.pageX-pointSize);
+    //$('.pointer').fadeIn();
+});
+$(window).on("mouseleave", function(){
+  //$('.pointer').fadeOut();
+});
+	
 });
 
 // 메인 - 서비스소개
@@ -20,7 +30,8 @@ function mainVertical() {
 		watchSlidesProgress: true,
 		watchSlidesVisibility: true,
         mousewheel: {
-            releaseOnEdges: true
+            releaseOnEdges: true,
+			invert: false,
         },
         mousewheelControl: true,
         pagination: {
@@ -62,6 +73,7 @@ function mainVertical() {
     $(".btn_top_wrap a").click(function(){
 		mainVertical.slideTo(0,600);
 	});
+	
 }
 
 // 상단메뉴
@@ -70,3 +82,4 @@ function gnbMenu(depth1) {
     
     $gnbDep1.eq(depth1-1).find('> a').addClass('on');
 }
+

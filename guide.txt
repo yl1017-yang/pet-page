@@ -1,0 +1,60 @@
+
+*****************************************
+펫미 홈페이지 
+*****************************************
+
+▶ 사이트 경로
+
+- 서비스소개 (메인)
+https://yl1017-yang.github.io/pet-page/main/index.html
+
+
+
+*****************************************
+▶ PC 풀사이즈 
+
+- 시안 : 1920 X 1000
+- 상단바, 하단바 제외한 실제 브라우저들(엣지, 크롬, 사파리, 파폭) 사이즈 : 1920 X 1080 기준 세로사이즈 970~980 높이값사용
+
+- 웹, 모바일 왼쪽 네이게이터, 중앙 텍스트, 오른쪽 배너버튼 세로 중앙정렬
+
+
+*****************************************
+▶ 반응형 사이즈
+
+@media all and (max-width:1920px){
+}
+
+@media all and (max-width:1440px){
+}
+
+@media all and (max-width:1024px){ 
+}
+
+@media all and (max-width:980px){
+    
+}
+
+@media all and (max-width:800px){
+
+}
+
+@media all and (max-width:480px){
+}
+
+@media all and (max-width:360px){
+}
+
+
+
+*****************************************
+▶ 폰트
+
+국문 : Pretendard 프리텐다드
+https://cactus.tistory.com/306?category=1007051
+https://noonnu.cc/font_page/698
+
+영문 : Poppins
+https://fonts.google.com/specimen/Poppins
+
+
