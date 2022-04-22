@@ -29,20 +29,7 @@
 <body>
 
 <!-- 마우스포인터 -->
-<div class="pointer2"></div>
-<script>
-    var pointSize = $(".pointer2").width()/2;
-    $(window).on("mousemove", function(e){   
-        $('.pointer2').css("top", e.pageY-pointSize);
-        $('.pointer2').css("left", e.pageX-pointSize);
-    });
-    $('.pointer2').on("mouseenter", function(){
-        $('.pointer2').removeClass('on');
-    });
-    $('.pointer2').on("mouseleave", function(){
-        $('.pointer2').addClass('on');
-    });
-</script>
+<div class="pointer"></div>
 <!-- //마우스포인터 -->
 
 <div class="wrap">

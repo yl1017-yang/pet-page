@@ -2,10 +2,11 @@ $(function() {
     $(window).on('load', function() {
         mainVertical();
     });
-
 	mainVertical();
-	gnbMenu();	
+	gnbMenu();
+	pointer();	
 });
+
 
 // 메인 - 서비스소개
 function mainVertical() {    
@@ -68,8 +69,21 @@ function mainVertical() {
 
 // 상단메뉴
 function gnbMenu(depth1) {
-	var $gnbDep1 = $('.gnb li');
-    
-    $gnbDep1.eq(depth1-1).find('> a').addClass('on');
+    $('.gnb li').eq(depth1-1).find('> a').addClass('on');
+}
+
+//마우스 포인터
+function pointer() {	
+	var pointSize = $(".pointer").width()/2;
+	$(window).on("mousemove", function(e){
+		$('.pointer').css("top", e.pageY-pointSize);
+		$('.pointer').css("left", e.pageX-pointSize);
+	});
+	$('.pointer').on("mouseenter", function(){
+		$('.pointer').removeClass('on');
+	});
+	$('.pointer').on("mouseleave", function(){
+		$('.pointer').addClass('on');
+	});
 }
 
