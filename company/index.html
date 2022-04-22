@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no"/>
+<meta http-equiv="imagetoolbar" content="no">
+<title>PETME</title>
+<meta name="title" content="PETME">
+<meta name="Keywords" content="#반려견 미용 #반려묘 미용 #호텔 #유치원" />
+<meta name="Description" content="반려생활의 동반자 반려동물 미용부터 호텔까지!, 최고의 퀄리티, 스마트한 예약, 안심 서비스, 반려동물의 연결고리" />
+<link rel="stylesheet" href="../resources/css/common.css">
+<link rel="stylesheet" href="../resources/css/layout.css">
+<link rel="stylesheet" href="../resources/css/main.css">
+<link rel="stylesheet" href="../resources/css/swiper.min.css">
+<script src="../resources/js/jquery-3.4.1.js"></script>
+<script src="../resources/js/common.js"></script>
+<script src="../resources/js/swiper.min.js"></script>
+<script>    
+    $(function() {
+        $("#header_wrap").load("../include/header.html", function() {
+            gnbMenu(4); //메뉴 페이지 on
+        });
+        $("#footer_wrap").load("../include/footer.html");
+    });
+</script>
+</head>
+<body>
+
+<!-- 마우스포인터 -->
+<div class="pointer2"></div>
+<script>
+    var pointSize = $(".pointer2").width()/2;
+    $(window).on("mousemove", function(e){   
+        $('.pointer2').css("top", e.pageY-pointSize);
+        $('.pointer2').css("left", e.pageX-pointSize);
+    });
+    $('.pointer2').on("mouseenter", function(){
+        $('.pointer2').removeClass('on');
+    });
+    $('.pointer2').on("mouseleave", function(){
+        $('.pointer2').addClass('on');
+    });
+</script>
+<!-- //마우스포인터 -->
+
+<div class="wrap">
+    <!-- 상단 -->
+    <div id="header_wrap"></div>
+    <!-- //상단 -->
+
+    <!-- 본문내용 -->
+    <div class="container">
+        <section class="sub_visual">
+            서브 비주얼 이미지 및 텍스트
+        </section>
+
+        <section class="content">
+            회사소개 컨텐츠
+        </section>
+        
+    </div>    
+    <!-- //본문내용 -->
+
+    <!-- 하단 -->
+    <div id="footer_wrap"></div>
+    <!-- //하단 -->
+
+</div>
+</body>
+</html>

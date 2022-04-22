@@ -4,17 +4,7 @@ $(function() {
     });
 
 	mainVertical();
-	gnbMenu();
-	var pointSize = $(".pointer").width()/2;
-$(window).on("mousemove", function(e){   
-    $('.pointer').css("top", e.pageY-pointSize);
-    $('.pointer').css("left", e.pageX-pointSize);
-    //$('.pointer').fadeIn();
-});
-$(window).on("mouseleave", function(){
-  //$('.pointer').fadeOut();
-});
-	
+	gnbMenu();	
 });
 
 // 메인 - 서비스소개
