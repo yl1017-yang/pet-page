@@ -20,6 +20,8 @@ function mainVertical() {
         touchStartPreventDefault:false,
 		watchSlidesProgress: true,
 		watchSlidesVisibility: true,
+		observer: true,
+		observeParents: true,
         mousewheel: {
             releaseOnEdges: true,
 			invert: false,
@@ -47,8 +49,18 @@ function mainVertical() {
 					$(".btn_top_wrap").css("position","fixed").css("bottom","80px").removeClass('on');
 				}
 			},
-			transitionEnd: function(){
+			transitionEnd: function(){		
 			},
+
+			// reachEnd: function () {
+			// 	$('.swiper-pagination').css({"display":"none"})
+			// },
+			// slidePrevTransitionStart: function () {
+			// 	$('.swiper-pagination').css({"display":"block"})
+			// },
+			// slideChangeTransitionEnd: function(){
+			// 	alert(this.activeIndex);
+			// },
 		},
 
         breakpoints: {

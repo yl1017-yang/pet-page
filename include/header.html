@@ -24,6 +24,30 @@
             <a href="#" class="on">반려인</a>
             <a href="#">사장님</a>            
         </div>
+        
+        <dl class="mo_member">
+            <dt><a href="#"><span>반려인</span></a></dt>
+            <dd>
+                <ul>
+                    <li><a href="#">반려인</a></li>
+                    <li><a href="#">사장님</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <script>
+            $(".mo_member dt a").click(function(e) {
+                e.preventDefault();
+                $(".mo_member dd ul").toggle();
+            });
+
+            $(".mo_member dd ul li a").click(function(e) {
+                e.preventDefault();
+                var text = $(this).html();
+                $(".mo_member dt a span").html(text);
+                $(".mo_member dd ul").hide();
+            });
+        </script>
+
         <a href="#" class="util_insta" title="인스타그램 바로가기"><span class="blind">인스타그램</span></a>
         <a href="#" class="util_facebook" title="페이스북 바로가기"><span class="blind">페이스북</span></a>
     </div>
