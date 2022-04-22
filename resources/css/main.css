@@ -88,7 +88,7 @@
 }
 
 /* pagination */
-.swiper-pagination{width:50px;}
+.fullscreen .swiper-pagination{width:50px;}
 .swiper-container-vertical>.swiper-pagination-bullets{left:5%;right:0;}
 .fullscreen .swiper-pagination-bullet{position:relative;background:#fff !important;opacity:.4 !important;}
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:50px 0 !important;}
@@ -153,10 +153,10 @@
 
 
 /* 반응형 */
-@media all and (max-width:1920px){
+@media all and (max-width:1920px) {
 }
 
-@media all and (max-width:1440px){
+@media all and (max-width:1440px) {
     .fullscreen .swiper-slide .text_wrap.right {
         margin-left:1%;
     }
@@ -168,7 +168,7 @@
     .quick_sns{right:2%;}
 }
 
-@media all and (max-width:1024px){
+@media all and (max-width:1024px) {
     .fullscreen .swiper-slide .text_wrap.right {
         left:90px;
         margin-left:0;
@@ -177,17 +177,17 @@
     .quick_sns{display:none;}
 }
 
-@media all and (max-width:980px){
+@media all and (max-width:980px) {
     
 }
 
-@media all and (max-width:800px){
+@media all and (max-width:720px) {
 
 }
 
-@media all and (max-width:480px){
+@media all and (max-width:480px) {
 }
 
-@media all and (max-width:360px){
+@media all and (max-width:360px) {
 }
 

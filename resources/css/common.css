@@ -110,23 +110,3 @@ input[type='text']:focus:-moz-placeholder{visibility:hidden}
 input[type='text']:focus::-moz-placeholder{visibility:hidden}
 input[type='text']:focus:-ms-input-placeholder{visibility:hidden}
 
-
-/* 반응형 */
-@media all and (max-width:1920px){
-}
-
-@media all and (max-width:1440px){
-}
-
-@media all and (max-width:1024px){
-}
-
-@media all and (max-width:800px){
-}
-
-@media all and (max-width:480px){
-}
-
-@media all and (max-width:360px){
-}
-

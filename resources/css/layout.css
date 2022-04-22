@@ -5,6 +5,9 @@ html, body{font-size:16px;}
 
 html, body, .wrap, .container, .fullscreen{width:100%;height:100%;}
 
+/* 마우스포인터 */
+.pointer2{position:fixed;width:24px;height:24px;border-radius:50px;background:#ffca00;/* transition:all 0.5s ease-out; */z-index:10;}
+.pointer2.on{width:48px;height:48px;margin:-12px -12px;opacity:50%;}
 
 /* 본문 */
 .container{position:relative;overflow:hidden;}
@@ -85,13 +88,14 @@ html, body, .wrap, .container, .fullscreen{width:100%;height:100%;}
     .util .util_facebook{margin-left:5px;}
 }
 
-@media all and (max-width:980px){
-    /* 상단 */
+@media all and (max-width:980px) {
+    /* PC 상단 */
     .gnb{display:none;}
 
 }
 
-@media all and (max-width:800px) {
+@media all and (max-width:720px) {
+    .pointer2{display:none;}
 }
 
 @media all and (max-width:680px) {

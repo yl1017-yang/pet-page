@@ -41,10 +41,26 @@
         </div>
 
         <section class="swiper-container fullscreen">
+            <!-- 마우스포인터 -->
+            <div class="pointer2"></div>
+            <script>
+                var pointSize = $(".pointer2").width()/2;
+                $(window).on("mousemove", function(e){   
+                    $('.pointer2').css("top", e.pageY-pointSize);
+                    $('.pointer2').css("left", e.pageX-pointSize);
+                });
+                $('.pointer2').on("mouseenter", function(){
+                    $('.pointer2').removeClass('on');
+                });
+                $('.pointer2').on("mouseleave", function(){
+                    $('.pointer2').addClass('on');
+                });
+            </script>
+            <!-- //마우스포인터 -->
             <div class="swiper-pagination"></div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <!-- 스크롤아이콘 / quick sns 버튼 -->                 
+                    <!-- 스크롤아이콘 / quick sns 버튼 -->
                     <div class="scroll_down">
                         <p>Scroll</p>
                         <i><span class="blind">스크롤아이콘</span></i>
@@ -53,6 +69,7 @@
                         <a href="#" class="quick_android" title="Google play 바로가기"><span class="blind">Google play</span></a>
                         <a href="#" class="quick_iso" title="App store 바로가기"><span class="blind">App store</span></a>
                     </div>
+                    <!-- //스크롤아이콘 / quick sns 버튼 -->
                     <div class="inner">
                         <div class="text_wrap">
                             <p class="tag"><span># 반려견 미용</span> <span># 반려묘 미용</span># 호텔 <span># 유치원</span></p>
