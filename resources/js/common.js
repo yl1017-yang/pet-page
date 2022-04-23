@@ -137,7 +137,7 @@ function pointer() {
 			left: mouseX + "px"
 		});
 
-		$("a, button, .swiper-pagination-bullet, input[type=submit], button").on("mouseenter mouseleave", function (e) {
+		$("a, button, .swiper-pagination-bullet, input[type=submit]").on("mouseenter mouseleave", function (e) {
 			if (e.type == "mouseenter") {
 				cursor.addClass("on");
 			} else if (e.type == "mouseleave") {
