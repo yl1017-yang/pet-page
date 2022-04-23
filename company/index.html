@@ -15,20 +15,19 @@
 <link rel="stylesheet" href="../resources/css/sub.css">
 <link rel="stylesheet" href="../resources/css/swiper.min.css">
 <script src="../resources/js/jquery-3.4.1.js"></script>
-<script src="../resources/js/common.js"></script>
 <script src="../resources/js/swiper.min.js"></script>
+<!-- header load시 스크립트 구현 안되어 common.js는 header.html에 있음 -->
 <script>    
     $(function() {
         $("#header_wrap").load("../include/header.html", function() {
-            gnbMenu(4); //메뉴 페이지 on
             $("#header_wrap").addClass('sub_header');
+            gnbMenu(4); //메뉴 페이지 on
         });
-        $("#footer_wrap").load("../include/footer.html");
+        $("#footer_wrap").load("../include/footer.html");	
     });
 </script>
 </head>
 <body>
-
 <div class="wrap">
     <!-- 마우스포인터 -->
     <div class="pointer"></div>
@@ -40,12 +39,15 @@
 
     <!-- 본문내용 -->
     <div class="container">
+
         <section class="sub_visual">
             서브 비주얼 이미지 및 텍스트
         </section>
 
         <section class="content">
-            회사소개 컨텐츠
+            <h2>회사소개 컨텐츠</h2>
+            <a href="../company/index.html" style="display:inline-block;width:250px;line-height:100px;background:skyblue;margin-top:50px;z-index:20;">포인터 테스트</a>
+            <a href="../company/index.html" style="display:inline-block;width:250px;line-height:100px;margin-top:50px;z-index:20;">포인터 테스트222</a>            
         </section>
 
     </div>    

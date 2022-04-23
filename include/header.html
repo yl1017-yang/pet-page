@@ -1,3 +1,5 @@
+<script src="../resources/js/common.js"></script>
+
 <!-- 헤더 -->
 <header class="header">
     <h1 class="logo">
@@ -23,8 +25,7 @@
         <div class="util_member">
             <a href="#" class="on">반려인</a>
             <a href="#">사장님</a>            
-        </div>
-        
+        </div>        
         <dl class="mo_member">
             <dt><a href="#"><span>반려인</span></a></dt>
             <dd>
@@ -34,20 +35,6 @@
                 </ul>
             </dd>
         </dl>
-        <script>
-            $(".mo_member dt a").click(function(e) {
-                e.preventDefault();
-                $(".mo_member dd ul").toggle();
-            });
-
-            $(".mo_member dd ul li a").click(function(e) {
-                e.preventDefault();
-                var text = $(this).html();
-                $(".mo_member dt a span").html(text);
-                $(".mo_member dd ul").hide();
-            });
-        </script>
-
         <a href="#" class="util_insta" title="인스타그램 바로가기"><span class="blind">인스타그램</span></a>
         <a href="#" class="util_facebook" title="페이스북 바로가기"><span class="blind">페이스북</span></a>
     </div>
@@ -98,16 +85,4 @@
         </div>
     </div>
 </div>
-<script>
-	$('.btn_nav_open').on('click',function(){
-		var href = $(this).attr("href");
-		$('.mo_nav_wrap' + href).addClass('on');
-		$('body').css({'height':$(window).height(), 'overflow':'hidden'});
-	});
-	$('.mo_nav_wrap .btn_close').on('click', function(e){
-		e.preventDefault();
-		$('.mo_nav_wrap').removeClass('on');
-		$('body').css({'height':$(window).height(), 'overflow':'auto'});
-	});
-</script>
 <!-- //모바일 메뉴 open -->

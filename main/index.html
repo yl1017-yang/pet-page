@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="../resources/css/main.css">
 <link rel="stylesheet" href="../resources/css/swiper.min.css">
 <script src="../resources/js/jquery-3.4.1.js"></script>
-<script src="../resources/js/common.js"></script>
 <script src="../resources/js/swiper.min.js"></script>
+<!-- header load시 스크립트 구현 안되어 common.js는 header.html에 있음 -->
 <script>    
     $(function() {
         $("#header_wrap").load("../include/header.html", function() {
@@ -28,6 +28,10 @@
 </head>
 <body>
 <div class="wrap">
+    <!-- 마우스포인터 -->
+    <div class="pointer"></div>
+    <!-- //마우스포인터 -->
+    
     <!-- 상단 -->
     <div id="header_wrap"></div>
     <!-- //상단 -->
@@ -40,9 +44,6 @@
         </div>
 
         <section class="swiper-container fullscreen">
-            <!-- 마우스포인터 -->
-            <div class="pointer"></div>
-            <!-- //마우스포인터 -->
             <div class="swiper-pagination"></div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide section01">
@@ -152,7 +153,7 @@
         </section>
         
     </div>    
-    <!-- //본문내용 -->
+    <!-- //본문내용 -->    
 </div>
 </body>
 </html>

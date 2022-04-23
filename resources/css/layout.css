@@ -1,19 +1,17 @@
 @charset "utf-8";
 
 html, body{font-size:16px;}
-.wrap{position:relative;}
+.wrap{position:relative;overflow-x:hidden;}
 
 html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 
 /* 마우스포인터 */
-.pointer{position:absolute;width:24px;height:24px;border-radius:50px;background:#ffca00;/* transition:all 0.5s ease-out; */z-index:10;}
-.pointer.on{width:48px;height:48px;margin:-12px -12px;opacity:50%;}
+.pointer{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);background:#ffca00;width:24px;height:24px;border-radius:50%;pointer-events:none;z-index:1000;}
+.pointer.on{width:48px;height:48px;opacity:0.5;}
 
 /* 본문 */
-.main_container{position:relative;overflow:hidden;}
+.main_container{position:relative;overflow:hidden;z-index:1;}
 .container{position:relative;overflow:hidden;z-index:1;}
-.sub_visual{width:100%;height:200px;}
-.content{min-height:500px;}
 
 /* 상단 */
 #header_wrap{position:fixed;top:0;left:0;width:100%;display:flex;justify-content:center;z-index:20;}
@@ -36,6 +34,9 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 .header .util .util_insta:hover{background-color:rgba(20,20,20,0.6);}
 .header .util .util_facebook{width:40px;height:40px;background:rgba(20,20,20,0.2) url('../../images/common/ico_facebook.png') no-repeat 50% 50%;border-radius:100%;margin-left:20px;transition:all 0.3s ease-in-out;}
 .header .util .util_facebook:hover{background-color:rgba(20,20,20,0.6);}
+
+/* 서브상단 */
+#header_wrap.sub_header{background:#444;;}
 
 /* 모바일 - 반려인/사장님 */
 .mo_member{display:none;}
@@ -75,19 +76,15 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 .mo_nav_wrap .mo_nav_inner .mo_sns .mo_insta{display:inline-block;width:32px;height:32px;background:rgba(255,255,255,0.2) url('../../images/common/ico_insta.png') no-repeat 50% 50%/50%;border-radius:100%;}
 .mo_nav_wrap .mo_nav_inner .mo_sns .mo_facebook{display:inline-block;width:32px;height:32px;background:rgba(255,255,255,0.2) url('../../images/common/ico_facebook.png') no-repeat 50% 50%/50%;border-radius:100%;margin-left:12px;}
 
-
-/* 서브상단 */
-#header_wrap.sub_header{background:#555;}
-
 /* 하단 */
-#footer_wrap{width:100%;background:#232326;display:flex;justify-content:center;z-index:10;}
-.footer{position:relative;width:calc(100% - 160px);height:auto;display:flex;justify-content:space-between;margin:114px 0 50px;font-size:16px;font-weight:400;color:#bcbcbd;}
+#footer_wrap{width:100%;background:#232326;display:flex;justify-content:center;}
+.footer{position:relative;width:calc(100% - 160px);height:auto;display:flex;justify-content:space-between;margin:114px 0 0;padding-bottom:80px;font-size:16px;font-weight:400;color:#bcbcbd;}
 .footer dt{margin-bottom:10px;color:#fff;}
 .footer dd{margin-bottom:10px;}
 .footer .ft_info1{width:13%;}
 .footer .ft_info2{width:31%;}
 .footer .ft_info2 dt{display:inline-block;width:115px;vertical-align:top;}
-.footer .ft_info2 dd{display:inline-block;width:340px;}
+.footer .ft_info2 dd{display:inline-block;width:320px;}
 .footer .ft_info3{width:24%;}
 .footer .ft_info3 dt{display:inline-block;width:100px;vertical-align:top;}
 .footer .ft_info3 dd{display:inline-block;width:230px;}
@@ -110,6 +107,11 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 @media all and (max-width:1920px) {
 }
 
+@media all and (max-width:1550px) {
+    .footer{margin-top:80px;}
+    .footer dt{margin-bottom:0;}
+}
+
 @media all and (max-width:1440px) {
     /* 상단 */
     .header .logo{width:auto;}
@@ -119,8 +121,6 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
     .header .util .util_facebook{margin-left:10px;}
 
     /* 하단 */
-    .footer{margin-top:80px;}
-    .footer dt{margin-bottom:0;}
     .footer .ft_sns{margin-top:0;}
     .footer .ft_sns a{display:block;}
     .footer .ft_sns .ft_sns_iso{margin-left:0;margin-top:10px;}
