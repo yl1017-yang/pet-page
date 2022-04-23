@@ -127,7 +127,6 @@ function moMember() {
 
 //마우스 포인터
 function pointer() {
-	//$('body').addClass('stop-scrolling');
 	var cursor = $(".pointer");
 	$(document).mousemove(function (e) {
 		var mouseX = e.pageX;
