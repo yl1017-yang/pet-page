@@ -1,7 +1,7 @@
 $(function() {
     $(window).on('resize load', function () {
         //mainVertical();
-    });
+    });	
 	mainVertical();
 	gnbMenu();
 	pointer();
@@ -127,17 +127,18 @@ function moMember() {
 
 //마우스 포인터
 function pointer() {
+	//$('body').addClass('stop-scrolling');
 	var cursor = $(".pointer");
-	var pointSize = $('.pointer').width()/2;
 	$(document).mousemove(function (e) {
 		var mouseX = e.pageX;
 		var mouseY = e.pageY;
+		console.log(e.pageX, e.pageY);
 		cursor.css({
 			top: mouseY + "px",
 			left: mouseX + "px"
 		});
 
-		$("a, button, .swiper-pagination-bullet, input[type=submit]").on("mouseenter mouseleave", function (e) {
+		$("a, button, .swiper-pagination-bullet, input[type=submit], button").on("mouseenter mouseleave", function (e) {
 			if (e.type == "mouseenter") {
 				cursor.addClass("on");
 			} else if (e.type == "mouseleave") {
