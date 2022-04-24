@@ -21,8 +21,8 @@ function mainVertical() {
         touchStartPreventDefault:false,
 		watchSlidesProgress: true,
 		watchSlidesVisibility: true,
-		observer : true,
-		observeParents : true,
+		//observer : true,
+		//observeParents : true,
         mousewheel: {
             releaseOnEdges: true,
 			invert: false,
@@ -75,8 +75,6 @@ function mainVertical() {
 		},
 
         breakpoints: {
-			720: {
-			},
 			1024: {
 				allowTouchMove:true,
 				simulateTouch:true,
