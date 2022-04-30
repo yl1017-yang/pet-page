@@ -6,7 +6,10 @@
 ▶ 사이트 경로
 
 - 서비스소개 (메인)
-https://yl1017-yang.github.io/pet-page/main/index.html
+https://yl1017-yang.github.io/pet-page/main/index2.html
+
+- 이용안내
+https://yl1017-yang.github.io/pet-page/use/index.html
 
 - 회사소개 : 레이아웃만 잡음
 https://yl1017-yang.github.io/pet-page/company/index.html

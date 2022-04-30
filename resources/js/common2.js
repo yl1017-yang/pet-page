@@ -3,10 +3,12 @@ $(function() {
         //mainVertical();
     });	
 	mainVertical();
+	useVertical();
+	useStep();
 	gnbMenu();
 	pointer();
 	moNav();
-	moMember();
+	moMember();	
 });
 
 // 메인 - 서비스소개
@@ -89,7 +91,114 @@ function mainVertical() {
 	});
 }
 
-//세로
+
+// 이용안내
+function useVertical() {
+    var useVertical = new Swiper('.usefullpage', {
+        direction: 'vertical',
+		effect: 'slide',
+        speed: 800,
+        allowTouchMove:false,
+        simulateTouch:false,
+        touchStartPreventDefault:false,
+		watchSlidesProgress: true,
+		watchSlidesVisibility: true,
+		observer : true,
+		observeParents : true,
+		effect: "creative",
+        creativeEffect: {
+          prev: {
+			shadow:false,
+            translate: [0, 0, 0],
+          },
+          next: {
+            translate: [0, "100%", 0],
+          },
+        },
+        mousewheel: {
+            releaseOnEdges: true,
+			forceToAxis: true,
+			invert: false,
+        },
+        mousewheelControl: true,
+        pagination: {
+            el: '.usefullpage .swiper-pagination',
+            clickable : true,
+        },
+
+        on:{
+			init: function(){
+			},
+			transitionStart: function(){
+				if(this.activeIndex != 0){
+					$('.btn_top_wrap').fadeIn(500);
+				}else{
+					$('.btn_top_wrap').fadeOut(500);
+				}
+				
+				var footHeight = $('.footer_section').outerHeight();
+				if($('.footer_section').hasClass('swiper-slide-visible')){
+					$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 70).addClass('on');
+					$('.swiper-pagination').css({'display':'none'})
+				}else{
+					$('.btn_top_wrap').css('position','fixed').css('bottom','70px').removeClass('on');
+					$('.swiper-pagination').css({'display':'block'})
+				}
+
+				if ($(window).width() < 720) {
+					var footHeight = $('.footer_section').outerHeight();
+					if($('.footer_section').hasClass('swiper-slide-visible')){
+						$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 40).addClass('on');
+					}else{
+						$('.btn_top_wrap').css('position','fixed').css('bottom','40px').removeClass('on');
+					}
+				}
+
+				//2번째 영역 pagination 블랙
+				if( $(".section02").hasClass('swiper-slide-visible') ){
+					$('.usefullpage .swiper-pagination-bullet').addClass('on');
+				} else {
+					$('.usefullpage .swiper-pagination-bullet').removeClass('on');
+				}
+			},
+		},
+
+        breakpoints: {
+			1024: {
+				allowTouchMove:true,
+				simulateTouch:true,
+				grabCursor: true,
+				touchStartPreventDefault:true,
+			},
+		},
+    });
+
+    $('.btn_top_wrap a').click(function(){
+		useVertical.slideTo(0,600);
+	});
+}
+
+// 이용안내 - 모바일 스와이프
+function useStep() {
+	new Swiper('.step_section', {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		allowTouchMove: true,
+		spaceBetween: 0,
+		loop: true,
+		loopAdditionalSlides : 1,
+		speed: 700,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		}
+	});	
+}
+
+
+
+
+//세로 휠 up
 function activeHeightSet() {
 	var activeHt = $(".swiper-slide-active .inner").outerHeight();
 	eventActiveHt(activeHt);
