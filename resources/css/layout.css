@@ -17,9 +17,26 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
 .quick_sns .quick_iso:hover{background-color:rgba(20,20,20,0.6);}
 
 /* 상단가기 버튼 */
-.btn_top_wrap{display:none;position:fixed;bottom:80px;right:4.16%;transition:1s;z-index:20;}
+.btn_top_wrap{display:none;position:fixed;bottom:80px;right:4.16%;transition:1s;z-index:10;}
 .btn_top_wrap .btn_top{display:block;position:relative;width:60px;height:60px;border-radius:100%;background-color:rgba(0, 0, 0, 0.7);background-image:url("../../images/common/icon_arrow_btn.png");background-repeat:no-repeat;background-position:50%;}
 .btn_top_wrap .btn_top:after{content:'';position:absolute;left:-50%;top:-50%;width:114px;height:114px;background:url('../../images/common/ico_backtop.png') no-repeat 50% 50%;-webkit-animation:topRotate 2s linear both infinite;animation:topRotate 2s linear both infinite;}
+
+@-webkit-keyframes topRotate {
+    0% {
+    	transform:rotate(0deg);
+    }
+	100% {
+		transform:rotate(360deg);
+	}
+}
+@keyframes topRotate {
+    0% {
+    	transform:rotate(0deg);
+    }
+	100% {
+		transform:rotate(360deg);
+	}
+}
 
 /* 본문내용 */
 .main_container{position:relative;overflow:hidden;z-index:1;}

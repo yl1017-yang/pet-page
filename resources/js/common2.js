@@ -175,7 +175,7 @@ function useVertical() {
 		},
     });
 
-    $('.btn_top_wrap a').click(function(){
+    $('.btn_top_wrap').click(function(){
 		useVertical.slideTo(0,600);
 	});
 }

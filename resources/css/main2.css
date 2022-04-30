@@ -97,23 +97,6 @@
 .fullscreen .swiper-pagination-bullet-active:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.1);transition:all .3s;opacity:1;}
 .fullscreen .swiper-pagination-bullets span:last-child{display:none !important;}
 
-@-webkit-keyframes topRotate {
-    0% {
-    	transform:rotate(0deg);
-    }
-	100% {
-		transform:rotate(360deg);
-	}
-}
-@keyframes topRotate {
-    0% {
-    	transform:rotate(0deg);
-    }
-	100% {
-		transform:rotate(360deg);
-	}
-}
-
 /* 스크롤다운 */
 .fullscreen .scroll_down{position:absolute;width:24px;left:5%;bottom:4.5%;text-align:center;z-index:10;}
 .fullscreen .scroll_down i{display:block;position:relative;width:24px;height:36px;border:2px solid #fff;border-radius:15px;}
