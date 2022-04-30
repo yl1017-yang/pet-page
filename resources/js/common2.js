@@ -24,14 +24,14 @@ function mainVertical() {
 		watchSlidesVisibility: true,
 		observer : true,
 		observeParents : true,
-		effect: "creative",
+		effect: 'creative',
         creativeEffect: {
           prev: {
 			shadow:false,
             translate: [0, 0, 0],
           },
           next: {
-            translate: [0, "100%", 0],
+            translate: [0, '100%', 0],
           },
         },
         mousewheel: {
@@ -56,19 +56,19 @@ function mainVertical() {
 				
 				var footHeight = $('.footer_section').outerHeight();
 				if($('.footer_section').hasClass('swiper-slide-visible')){
-					$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 70).addClass('on');
+					//$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 70).addClass('on');
 					$('.swiper-pagination').css({'display':'none'})
 				}else{
-					$('.btn_top_wrap').css('position','fixed').css('bottom','70px').removeClass('on');
+					//$('.btn_top_wrap').css('position','fixed').css('bottom','70px').removeClass('on');
 					$('.swiper-pagination').css({'display':'block'})
 				}
 
 				if ($(window).width() < 720) {
 					var footHeight = $('.footer_section').outerHeight();
 					if($('.footer_section').hasClass('swiper-slide-visible')){
-						$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 40).addClass('on');
+						//$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 40).addClass('on');
 					}else{
-						$('.btn_top_wrap').css('position','fixed').css('bottom','40px').removeClass('on');
+						//$('.btn_top_wrap').css('position','fixed').css('bottom','40px').removeClass('on');
 					}
 				}
 			},
@@ -92,7 +92,7 @@ function mainVertical() {
 }
 
 
-// 이용안내
+// 이용방법
 function useVertical() {
     var useVertical = new Swiper('.usefullpage', {
         direction: 'vertical',
@@ -105,14 +105,14 @@ function useVertical() {
 		watchSlidesVisibility: true,
 		observer : true,
 		observeParents : true,
-		effect: "creative",
+		effect: 'creative',
         creativeEffect: {
           prev: {
 			shadow:false,
             translate: [0, 0, 0],
           },
           next: {
-            translate: [0, "100%", 0],
+            translate: [0, '100%', 0],
           },
         },
         mousewheel: {
@@ -138,27 +138,29 @@ function useVertical() {
 				
 				var footHeight = $('.footer_section').outerHeight();
 				if($('.footer_section').hasClass('swiper-slide-visible')){
-					$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 70).addClass('on');
+					//$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 70).addClass('on');
 					$('.swiper-pagination').css({'display':'none'})
 				}else{
-					$('.btn_top_wrap').css('position','fixed').css('bottom','70px').removeClass('on');
+					//$('.btn_top_wrap').css('position','fixed').css('bottom','70px').removeClass('on');
 					$('.swiper-pagination').css({'display':'block'})
 				}
 
 				if ($(window).width() < 720) {
 					var footHeight = $('.footer_section').outerHeight();
 					if($('.footer_section').hasClass('swiper-slide-visible')){
-						$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 40).addClass('on');
+						//$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 40).addClass('on');
 					}else{
-						$('.btn_top_wrap').css('position','fixed').css('bottom','40px').removeClass('on');
+						//$('.btn_top_wrap').css('position','fixed').css('bottom','40px').removeClass('on');
 					}
 				}
 
 				//2번째 영역 pagination 블랙
-				if( $(".section02").hasClass('swiper-slide-visible') ){
+				if( $('.section02').hasClass('swiper-slide-visible') ){
 					$('.usefullpage .swiper-pagination-bullet').addClass('on');
+					$('#header_wrap').addClass('on');
 				} else {
 					$('.usefullpage .swiper-pagination-bullet').removeClass('on');
+					$('#header_wrap').removeClass('on');
 				}
 			},
 		},
@@ -178,9 +180,9 @@ function useVertical() {
 	});
 }
 
-// 이용안내 - 모바일 스와이프
+// 이용방법 - step 스와이프
 function useStep() {
-	new Swiper('.step_section', {
+	new Swiper('.step_section_wrap .swiper-container', {
 		slidesPerView: 'auto',
 		centeredSlides: true,
 		allowTouchMove: true,
@@ -195,19 +197,16 @@ function useStep() {
 	});	
 }
 
-
-
-
-//세로 휠 up
+//effect: "creative" 추가
 function activeHeightSet() {
-	var activeHt = $(".swiper-slide-active .inner").outerHeight();
+	var activeHt = $('.swiper-slide-active .inner').outerHeight();
 	eventActiveHt(activeHt);
-	$("body, html").stop(true).animate( {scrollTop: "0",}, 1000);
+	$('body, html').stop(true).animate( {scrollTop: '0',}, 1000);
 }
-function eventActiveHt(activeHt) {		
-	$(".swiper-container").stop(true).animate( { }, 100	);
+function eventActiveHt(activeHt) {
+	$('.swiper-container').stop(true).animate( { }, 100	);
 }
-swiper.on("slideChangeTransitionStart", activeHeightSet);
+swiper.on('slideChangeTransitionStart', activeHeightSet);
 
 
 // 상단메뉴 페이지인식
@@ -218,7 +217,7 @@ function gnbMenu(depth1) {
 // 모바일 mo_nav_open 
 function moNav() {
 	$('.btn_nav_open').on('click',function(){
-		var href = $(this).attr("href");
+		var href = $(this).attr('href');
 		$('.mo_nav_wrap' + href).addClass('on');
 		$('body').css({'height':$(window).height(), 'overflow':'hidden'});
 	});
@@ -231,35 +230,35 @@ function moNav() {
 
 //모바일 - 반려인, 사장님 셀렉트박스
 function moMember() {
-	$(".mo_member dt a").click(function(e) {
+	$('.mo_member dt a').click(function(e) {
 		e.preventDefault();
-		$(".mo_member dd ul").toggle();
+		$('.mo_member dd ul').toggle();
 	});
-	$(".mo_member dd ul li a").click(function(e) {
+	$('.mo_member dd ul li a').click(function(e) {
 		e.preventDefault();
 		var text = $(this).html();
-		$(".mo_member dt a span").html(text);
-		$(".mo_member dd ul").hide();
+		$('.mo_member dt a span').html(text);
+		$('.mo_member dd ul').hide();
 	});
 }
 
 //마우스 포인터
 function pointer() {
-	var cursor = $(".pointer");
+	var cursor = $('.pointer');
 	$(document).mousemove(function (e) {
 		var mouseX = e.pageX;
 		var mouseY = e.pageY;
 		console.log(e.pageX, e.pageY);
 		cursor.css({
-			top: mouseY + "px",
-			left: mouseX + "px"
+			top: mouseY + 'px',
+			left: mouseX + 'px'
 		});
 
-		$("a, button, .swiper-pagination-bullet, input[type=submit]").on("mouseenter mouseleave", function (e) {
-			if (e.type == "mouseenter") {
-				cursor.addClass("on");
-			} else if (e.type == "mouseleave") {
-				cursor.removeClass("on");
+		$('a, button, .swiper-pagination-bullet, input[type=submit]').on('mouseenter mouseleave', function (e) {
+			if (e.type == 'mouseenter') {
+				cursor.addClass('on');
+			} else if (e.type == 'mouseleave') {
+				cursor.removeClass('on');
 			}
 		});
 	})

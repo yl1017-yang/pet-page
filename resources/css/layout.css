@@ -47,6 +47,8 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
 .header .util .util_facebook{width:40px;height:40px;background:rgba(20,20,20,0.2) url('../../images/common/ico_facebook.png') no-repeat 50% 50%;border-radius:100%;margin-left:20px;transition:all 0.3s ease-in-out;}
 .header .util .util_facebook:hover{background-color:rgba(20,20,20,0.6);}
 
+#header_wrap.on{display:none;}
+
 /* 서브상단 */
 #header_wrap.sub_header{background:#444;;}
 
@@ -89,7 +91,7 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
 .mo_nav_wrap .mo_nav_inner .mo_sns .mo_facebook{display:inline-block;width:32px;height:32px;background:rgba(255,255,255,0.2) url('../../images/common/ico_facebook.png') no-repeat 50% 50%/50%;border-radius:100%;margin-left:12px;}
 
 /* 하단 */
-#footer_wrap{width:100%;background:#232326;display:flex;justify-content:center;}
+#footer_wrap{width:100%;height:350px;background:#232326;display:flex;justify-content:center;}
 .footer{position:relative;width:calc(100% - 160px);height:auto;display:flex;justify-content:space-between;margin:114px 0 0;padding-bottom:80px;font-size:16px;font-weight:400;color:#bcbcbd;}
 .footer dt{margin-bottom:10px;color:#fff;}
 .footer dd{margin-bottom:10px;}
@@ -112,7 +114,7 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
 .footer .ft_mo .util_facebook{display:inline-block;width:32px;height:32px;background:rgba(20,20,20,0.2) url('../../images/common/ico_facebook.png') no-repeat 50% 50%/16px;border-radius:100%;margin-left:15px;}
 
 /* 하단 */
-.fullscreen .footer_section{display:flex;width:100%;height:350px !important;z-index:999;}
+.footer_section{display:flex;width:100%;align-items:flex-end;}
 
 
 
@@ -182,7 +184,7 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
 
 @media all and (max-width:800px) {   
     /* 하단 */ 
-    .fullscreen .footer_section{height:470px !important;}    
+    #footer_wrap{height:470px;}
     .footer{display:block;font-size:14px;overflow:hidden;}
     .footer .ft_info1{float:left;width:50%;}
     .footer .ft_info2{float:left;width:50%;}
@@ -213,7 +215,7 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
     .mo_member dd ul li a{width:80px;padding:3px 10px 3px 0;font-size:12px;}
 
     /* 하단 */ 
-    .fullscreen .footer_section{height:520px !important;}
+    #footer_wrap{height:520px;}
     .footer{width:calc(100% - 40px);font-size:12px;margin-top:73px;}
     .footer .ft_info1{float:none;width:100%;}
     .footer .ft_info2{float:none;width:100%;margin-top:46px;}
@@ -232,7 +234,7 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
 }
 
 @media all and (max-width:480px) {
-    .fullscreen .footer_section{height:550px !important;}
+    #footer_wrap{height:550px;}
 }
 
 @media all and (max-width:360px) {
