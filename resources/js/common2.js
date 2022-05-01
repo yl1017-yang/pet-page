@@ -15,9 +15,9 @@ $(function() {
 function mainVertical() {
     var mainVertical = new Swiper('.fullscreen', {
         direction: 'vertical',
-        //effect: 'slide',
+        effect: 'slide',
         speed: 800,
-        allowTouchMove:false,
+        //allowTouchMove:false,
         simulateTouch:false,
         touchStartPreventDefault:false,
 		watchSlidesProgress: true,
@@ -78,7 +78,7 @@ function mainVertical() {
 
         breakpoints: {
 			1024: {
-				allowTouchMove:true,
+				//allowTouchMove:true,
 				simulateTouch:true,
 				grabCursor: true,
 				touchStartPreventDefault:true,
@@ -98,7 +98,7 @@ function useVertical() {
         direction: 'vertical',
 		effect: 'slide',
         speed: 800,
-        allowTouchMove:false,
+        //allowTouchMove:false,
         simulateTouch:false,
         touchStartPreventDefault:false,
 		watchSlidesProgress: true,
@@ -167,7 +167,7 @@ function useVertical() {
 
         breakpoints: {
 			1024: {
-				allowTouchMove:true,
+				//allowTouchMove:true,
 				simulateTouch:true,
 				grabCursor: true,
 				touchStartPreventDefault:true,
